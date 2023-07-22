@@ -1,0 +1,33 @@
+\begin{table*}
+    \centering
+    \caption{
+        \label{tab:example}
+        Example Distributions \cite{David:Example}
+    }
+    {\small \begin{tabular}%
+        {
+            >{\raggedright\arraybackslash}p{6.4cm}%
+            >{\raggedleft\arraybackslash}p{0.8cm}%
+            >{\raggedleft\arraybackslash}p{8.7cm}%
+        }
+        \toprule
+        \multicolumn{3}{c}{ \bf Trust Distributions } \\
+        {\bf Question ID} & &
+        \multicolumn{1}{r}{\bf Distributions}\\
+        \midrule
+
+        \multicolumn{1}{l}{ \bf Trust } &
+        { \bf Count } &
+        \multicolumn{1}{r}{
+            \legendbox{Firebrick1!100} Strong Disagree \,
+            \legendbox{Firebrick2!30} Disagree \,
+            \legendbox{gray!20} Neutral \,
+            \legendbox{Green2!50} Agree \,
+            \legendbox{Green1!100} Strong Agree
+        } \\
+        \midrule
+            \input figures/data/example_data \\
+
+        \bottomrule
+    \end{tabular}}
+\end{table*}
