@@ -55,12 +55,19 @@ def create_inline_header(index, n_row, counts):
 
     return f"{header} &"
 
-def write_inline_bar(qids, counts, filename):
+def write_inline_bar(ids, counts, filename):
+    """
+    ids: list of ids for each row
+    counts: list of interger list for each row
+    filename: name of the file to write, appends to TABLE_DATA_DIR
+
+    The length of ids and counts must be the same and the index should match
+    """
     with open(os.path.join(TABLE_DATA_DIR, filename), "w") as fd:
 
         res = get_boxes(len(counts), counts)
-        for i, qid in enumerate(qids):
-            header = create_inline_header(qid, i, counts)
+        for i, id in enumerate(ids):
+            header = create_inline_header(id, i, counts)
             fd.write(f"{header} {res[i]} \\\\\n")
 
 if __name__ == "__main__":
